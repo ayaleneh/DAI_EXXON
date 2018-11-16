@@ -62,8 +62,7 @@ function autocomplete(inp, arr) {
                console.log("value basic is "+value_basic)
               
           /*execute a function when someone clicks on the item value (DIV element):*/
-          b.addEventListener("click", myfunction())
-          function myfunction() {
+          b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;           
                 let para=document.createElement('li')
@@ -95,11 +94,11 @@ function autocomplete(inp, arr) {
                 value_basic.length=0
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
-          }
+          });
           a.appendChild(b);
         }
-      
-  
+      }
+  });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
       var x = document.getElementById(this.id + "autocomplete-list");
@@ -157,3 +156,7 @@ function autocomplete(inp, arr) {
       closeAllLists(e.target);
   });
 }
+
+
+
+
