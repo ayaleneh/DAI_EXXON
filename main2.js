@@ -1,5 +1,5 @@
 var value_basic=[]
-var names = ["eyasu","solomon","ayale","ayele","selam","mahlet","eyerus","adaneche","abebu"];
+var names = ["eyasu_terefe","solomon_terefe","ayale_solomon","ayele","selam","mahlet","eyerus","adaneche","abebu"];
 var namess_d = {
 eyasu : "eyasuu",
 solomon:"solomonn",
@@ -57,7 +57,7 @@ function autocomplete(inp, arr) {
           b.innerHTML += arr[i].substr(val.length,arr.length);
           /*insert a input field that will hold the current array item's value:*/
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-              value_basic=arr[i]
+              value_basic.push(arr[i])
                console.log("the first one:"+arr[i])
                console.log("value basic is "+value_basic)
               
